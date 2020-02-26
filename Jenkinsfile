@@ -5,8 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                echo env.CHANGE_ID
-                echo env.BRANCH_NAME
+                sh 'env'
             }
         }
         stage('Test') {
