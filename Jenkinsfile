@@ -15,8 +15,9 @@ pipeline {
         }
         stage('SonarQube analysis') {
           withSonarQubeEnv('local') { // Will pick the global server connection you have configured
-          sh "${scannerHome}/bin/sonar-scanner"
-        }
+            sh "${scannerHome}/bin/sonar-scanner"
+          }
+        } 
         stage('Test') {
             steps {
                 echo 'Testing..'
