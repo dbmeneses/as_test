@@ -13,7 +13,6 @@ pipeline {
                 sh 'sonar-scanner-4.2.0.1873-linux/bin/sonar-scanner -Dsonar.projectKey=github'
             }
         }
-}
         stage('Test') {
             steps {
                 echo 'Testing..'
